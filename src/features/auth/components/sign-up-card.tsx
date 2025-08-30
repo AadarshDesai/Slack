@@ -1,6 +1,12 @@
-export const SignUpCard = () => {
+import { SignInFlow } from "../types"
+
+interface SignUpCardProps {
+    setState: (state: SignInFlow) => void;
+};
+
+export const SignUpCard = ({ setState }: SignUpCardProps) => {
     return (
-        <div className="text-white text-2xl">
+        <div onClick={() => {setState("signIn")}} className="cursor-pointer">
             Sign Up Card
         </div>
     )
